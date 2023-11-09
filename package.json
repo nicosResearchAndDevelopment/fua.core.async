@@ -1,0 +1,27 @@
+{
+  "name": "@nrd/fua.core.async",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/async.js",
+  "files": [
+    "src/*"
+  ],
+  "devDependencies": {
+    "expect": "26.x",
+    "mocha": "10.x"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "mocha": {
+    "bail": false,
+    "recursive": false,
+    "spec": "test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git02.int.nsc.ag:10022/research/fua/core/async.git"
+  },
+  "author": "spetrac@nicos-ag.com",
+  "license": "UNLICENSED"
+}

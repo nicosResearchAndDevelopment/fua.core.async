@@ -1,7 +1,7 @@
 const
     {describe, test} = require('mocha'),
     expect           = require('expect'),
-    Promise          = require('../src/model/Promise.js');
+    Promise          = require('../lab/Promise.js');
 
 describe('core.async.Promise', function () {
 
