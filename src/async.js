@@ -105,6 +105,29 @@ async.delay = function (fn, delay, ...args) {
 
 /**
  * @template {any} T
+ * @param {function(...args: any): Promise<T> | T} fn
+ * @param {number} [maxRetries=2]
+ * @returns {function(...any: any): Promise<T>}
+ */
+async.retry = function (fn, maxRetries = 2) {
+    if (typeof fn !== 'function') throw new Error('fn must be a function');
+    if (!Number.isInteger(maxRetries)) throw new Error('maxRetries must be an integer');
+    if (maxRetries < 1 || maxRetries > Number.MAX_SAFE_INTEGER) throw new Error('maxRetries must be in range from 1 to ' + Number.MAX_SAFE_INTEGER);
+    return async function (...args) {
+        let error;
+        for (let current = 0; current < maxRetries; current++) {
+            try {
+                return await fn.apply(this, args);
+            } catch (err) {
+                error = err;
+            }
+        }
+        throw error;
+    };
+};
+
+/**
+ * @template {any} T
  * @param {Array<function(): Promise<T>>} fnQueue
  * @param {number} [maxConcurrent=1]
  * @returns {Promise<Array<T>>}
