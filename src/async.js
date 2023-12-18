@@ -80,6 +80,22 @@ async.iife = function (fn, ...args) {
     }
 };
 
+async.iife.process = function (fn, ...args) {
+    if (typeof fn !== 'function') throw new Error('fn must be a function');
+    const resolve = () => process.exit(0);
+    const reject  = (err) => {
+        console.error(err);
+        process.exit(1);
+    };
+    try {
+        const result = fn.apply(null, args);
+        if (result instanceof Promise) result.then(resolve).catch(reject);
+        else resolve()
+    } catch (err) {
+        reject(err);
+    }
+};
+
 /**
  * @template {any} T
  * @param {function(...args: any): Promise<T> | T} fn
