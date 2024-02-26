@@ -1,6 +1,6 @@
 {
   "name": "@nrd/fua.core.async",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "src/async.js",
   "files": [
