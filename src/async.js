@@ -1,5 +1,7 @@
 const async = exports;
 
+async.TaskQueue = require('./model/TaskQueue.js');
+
 /**
  * @template {any} T
  * @param {function(...args: any, cb: function(error?: Error, result?: T): void): any} fn
