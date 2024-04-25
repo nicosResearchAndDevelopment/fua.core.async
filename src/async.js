@@ -1,6 +1,7 @@
 const async = exports;
 
-async.TaskQueue = require('./model/TaskQueue.js');
+async.TaskQueue    = require('./model/TaskQueue.js');
+async.PromiseProxy = require('./model/PromiseProxy.js');
 
 /**
  * @template {any} T
