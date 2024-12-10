@@ -1,5 +1,5 @@
 {
-  "name": "@nrd/fua.core.async",
+  "name": "@nicosResearchAndDevelopment/fua.core.async",
   "version": "1.0.4",
   "description": "",
   "main": "src/async.js",
@@ -20,8 +20,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@git02.int.nsc.ag:10022/research/fua/core/async.git"
+    "url": "ssh://git@github.com:nicosResearchAndDevelopment/fua.core.async.git"
   },
-  "author": "spetrac@nicos-ag.com",
-  "license": "UNLICENSED"
+  "author": "Simon Petrac",
+  "license": "MIT"
 }
