@@ -1,5 +1,5 @@
 {
-  "name": "@nicosResearchAndDevelopment/fua.core.async",
+  "name": "@fua/core.async",
   "version": "1.0.4",
   "description": "",
   "main": "src/async.js",
@@ -22,6 +22,6 @@
     "type": "git",
     "url": "ssh://git@github.com:nicosResearchAndDevelopment/fua.core.async.git"
   },
-  "author": "Simon Petrac",
+  "author": "Simon Petrac <pfoerdie@gmail.com>",
   "license": "MIT"
 }

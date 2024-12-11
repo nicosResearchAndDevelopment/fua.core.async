@@ -1,1 +1,1 @@
-# fua.core.async
+# @fua/core.async
